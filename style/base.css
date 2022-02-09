@@ -1,8 +1,18 @@
+:root {
+  display: grid;
+  justify-items: center;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
 }
 
 body {
-  background-color: slategrey;
+  background: rgb(2, 0, 36);
+  background-color: var(--bg-color-dark);
+  color: var(--color-bright);
 }

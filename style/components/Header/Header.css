@@ -2,5 +2,13 @@ header {
   background-color: rgb(42, 42, 130);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  padding: 0.3rem;
+  display: grid;
+  justify-items: center;
+}
+
+h1:hover {
+  color: hotpink;
 }
