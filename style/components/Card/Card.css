@@ -1,9 +1,33 @@
-.QuestionCard {
-  background-color: #dddddd;
-  border-color: 2px gold solid;
+.Card {
+  background-color: var(--bg-color-bright);
+  border-color: 3px solid var(--color-bright);
   border-radius: 5px;
   border-top-right-radius: 25px;
   padding: 2px;
   margin: 1rem;
   color: blue;
+  max-width: 1100px;
+}
+
+.Card_content {
+  height: 20rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 5fr 1fr 2rem;
+  background-color: orange;
+  margin: 0.3rem;
+}
+
+.Card_title {
+  color: var(--color-h1-dark);
+  margin: 0.3rem;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  /* justify-items: center; */
+  gap: 1rem;
 }
