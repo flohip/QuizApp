@@ -1,0 +1,9 @@
+.QuestionCard {
+  background-color: #dddddd;
+  border-color: 2px gold solid;
+  border-radius: 5px;
+  border-top-right-radius: 25px;
+  padding: 2px;
+  margin: 1rem;
+  color: blue;
+}

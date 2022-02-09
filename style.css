@@ -2,4 +2,6 @@
 @import url(style/base.css);
 @import url(style/utils.css);
 
-@import url(style/components/card.css);
+@import url(style/components/Card/Card.css);
+@import url(style/components/Header/Header.css);
+@import url(style/components/Footer/Footer.css);
