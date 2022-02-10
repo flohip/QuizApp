@@ -9,14 +9,14 @@ footer {
   display: grid;
   justify-items: center;
   align-items: center;
-  z-index: 1;
+  z-index: 10;
 }
 
 .Footer_ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 .Footer_ul li {
   list-style-type: none;
