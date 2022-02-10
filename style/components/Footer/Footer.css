@@ -2,10 +2,8 @@ footer {
   background-color: rgb(42, 42, 130);
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 5rem;
-  padding: 0.3rem;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -13,13 +11,15 @@ footer {
 }
 
 .Footer_ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
   justify-content: space-between;
+  justify-items: center;
   align-items: center;
-  gap: 1rem;
-}
-.Footer_ul li {
+  column-gap: 5vw;
   list-style-type: none;
+  font-size: 1.5rem;
+  margin: 3rem;
 }
 
 .Footer_ul li:hover {
