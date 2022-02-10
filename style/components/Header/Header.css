@@ -4,9 +4,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  min-height: 5rem;
   padding: 0.3rem;
   display: grid;
   justify-items: center;
+  align-items: center;
+  z-index: 1;
 }
 
 h1:hover {

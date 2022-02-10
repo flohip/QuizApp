@@ -1,0 +1,27 @@
+footer {
+  background-color: rgb(42, 42, 130);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 5rem;
+  padding: 0.3rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.Footer_ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.Footer_ul li {
+  list-style-type: none;
+}
+
+.Footer_ul li:hover {
+  color: hotpink;
+}

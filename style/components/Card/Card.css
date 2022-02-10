@@ -10,12 +10,13 @@
 }
 
 .Card_content {
+  position: relative;
   height: 20rem;
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 5fr 1fr 2rem;
-  background-color: orange;
+  grid-template-rows: 1fr 1fr 2rem;
+  /* background-color: orange; */
   margin: 0.3rem;
 }
 
@@ -24,7 +25,23 @@
   margin: 0.3rem;
 }
 
-.tags {
+.Card_bookmark {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  width: 3rem;
+}
+.Card_show {
+  background-color: darkblue;
+  color: white;
+  width: 10rem;
+  height: 2rem;
+}
+.Card_show:hover {
+  color: darkblue;
+  background-color: white;
+}
+.Card_tags {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
