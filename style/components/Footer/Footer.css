@@ -16,7 +16,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 1rem; */
+  gap: 1rem;
 }
 .Footer_ul li {
   list-style-type: none;
