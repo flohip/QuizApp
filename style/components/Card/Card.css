@@ -44,6 +44,7 @@
   color: var(--color-h1-dark);
   margin: 0.3rem;
   font-size: 2rem;
+  font-family: "Special Elite", sans-serif;
 }
 
 .Card_show {
@@ -51,8 +52,11 @@
   color: white;
   width: 10rem;
   height: 2rem;
+  margin: 1rem;
   border: 2px solid var(--color-bright);
   box-shadow: 0 0 3px 1px var(--color-bright);
+  letter-spacing: 0.05rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .Card_show:hover {
   color: darkblue;
@@ -66,4 +70,37 @@
   justify-content: center;
   /* justify-items: center; */
   gap: 1rem;
+}
+
+form * {
+  display: block;
+}
+
+form label + input {
+  width: 20vw;
+}
+
+fieldset {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  width: 40vw;
+}
+
+fieldset > legend {
+  background-color: var(--bg-color-dark);
+  color: var(--color-bright);
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+}
+
+fieldset label {
+  margin: 0.3rem;
+}
+fieldset button {
+  background-color: var(--bg-color-dark);
+  color: var(--color-bright);
+  margin: 0.5rem;
 }
