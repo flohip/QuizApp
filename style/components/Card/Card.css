@@ -64,6 +64,15 @@
   border: 2px solid var(--color-dark);
   box-shadow: 0 0 3px 1px var(--color-dark);
 }
+.Card_answer {
+  display: none;
+  color: white;
+  font-size: 2rem;
+}
+.Card_show-answer {
+  display: inline;
+}
+
 .Card_tags {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
