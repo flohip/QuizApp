@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  font-family: "Special Elite", "Lato", sans-serif;
+  font-family: 'Special Elite', 'Lato', sans-serif;
   background-color: var(--bg-color-dark);
   color: var(--color-bright);
   display: grid;

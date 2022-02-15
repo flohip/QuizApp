@@ -1,7 +1,9 @@
-const toggleAnswerButton = document.querySelector(".Card_show");
-const answerText = document.querySelector(".Card_answer");
+const toggleAnswerButton = document.querySelector(
+  '[data-js="toggleAnswerButton"]'
+);
+const answerText = document.querySelector('[data-js="showHiddenAnswer"]');
 
-toggleAnswerButton.addEventListener("click", () => {
-  answerText.classList.toggle("Card_show-answer");
-  console.log("Button was clicked.");
+toggleAnswerButton.addEventListener('click', () => {
+  answerText.classList.toggle('Card_answer-show');
+  console.log('Button was clicked.');
 });
