@@ -1,8 +1,9 @@
 :root {
   --color-bright: gold;
-  --bg-color-dark: rgb(33 33 87);
+  --bg-color-dark: rgb(33, 33, 87);
   --bg-color-bright: #db9c55;
+
   /* --bg-color-bright: gold; */
-  --color-dark: rgb(64 80 226);
-  --color-h1-dark: rgb(17 0 255);
+  --color-dark: rgb(64, 80, 226);
+  --color-h1-dark: rgb(17, 0, 255);
 }

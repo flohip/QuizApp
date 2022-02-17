@@ -21,10 +21,7 @@
   height: 75px;
   top: 0;
   right: 0;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 100%;
+  border-radius: 0 25px 0 100%;
   background-color: gold;
   overflow: hidden;
 }
@@ -110,7 +107,6 @@ form {
 }
 
 fieldset {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -20,14 +20,10 @@ toggleAnswerButton?.addEventListener('click', () => {
 
 //Question Textarea of the create_question.html
 questionInput?.addEventListener('input', e => {
-  console.log('Aktuelles Zeichen: ' + e.data);
-  console.log(e.target.value.length);
   questionLog.textContent = e.target.value.length + txtMaxLength;
 });
 
 //Answer Textarea of the create_question.html
 answerInput?.addEventListener('input', e => {
-  console.log('Aktuelles Zeichen: ' + e.data);
-  console.log(e.target.value.length);
   answerLog.textContent = e.target.value.length + txtMaxLength;
 });
