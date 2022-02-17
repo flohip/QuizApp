@@ -6,7 +6,9 @@
   border-top-right-radius: 25px;
   padding: 1rem;
   margin: 5rem 0;
+  height: 35rem;
   color: blue;
+  width: 768px;
   max-width: 768px;
   position: relative;
   box-shadow: 0 0 5px 5px var(--color-bright);
@@ -28,10 +30,12 @@
 }
 
 .Card_content {
-  /* position: relative; */
+  position: absolute;
   border: 3px solid var(--color-bright);
   border-radius: 5px;
-  height: 20rem;
+  height: 80%;
+  width: 48rem;
+  max-width: 90%;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -46,6 +50,13 @@
   margin: 0.3rem;
   font-size: 2rem;
   font-family: 'Special Elite', sans-serif;
+}
+
+.Card_question {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  align-self: center;
 }
 
 .Card_button {
@@ -94,24 +105,45 @@ form label + input {
   width: 20vw;
 }
 
+form {
+  width: 40rem;
+}
+
 fieldset {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.5rem;
-  width: 40vw;
+  box-shadow: 0 0 5px 2px var(--bg-color-dark);
+  border: 3px solid var(--color-bright);
 }
 
-fieldset > legend {
-  background-color: var(--bg-color-dark);
-  color: var(--color-bright);
-  margin-bottom: 1rem;
-  padding: 0.3rem;
+fieldset textarea {
+  resize: none;
+  box-shadow: 0 0 3px 1px var(--color-dark);
+}
+
+fieldset > #tags-input {
+  box-shadow: 0 0 3px 1px var(--color-dark);
 }
 
 fieldset label {
   margin: 0.3rem;
+}
+
+fieldset > div {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset > div > label {
+  display: flex;
+  align-self: center;
+}
+
+.Textarea_count {
+  margin: 0.3rem 0;
 }
 
 fieldset button {

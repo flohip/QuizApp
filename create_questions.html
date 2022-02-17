@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Quiz App</title>
-  </head>
 
-  <body>
-    <header>
-      <h1 class="Header_title">Create Questions</h1>
-    </header>
-    <main>
-      <section class="Card">
-        <div class="Card_bookmark"></div>
-        <h2 id="Form_heading" class="Card_title">CREATE A QUESTION</h2>
-        <div class="Card_content">
-          <p id="Form_description" class="Card_question">
-            Please enter a valid question, an correct answer and four well
-            describing tags (separated by commata) in the form fields below.
-          </p>
-          <form
-            aria-labelledby="form-heading"
-            aria-describedby="form-description"
-          >
-            <fieldset>
-              <legend>CREATE A QUESTION</legend>
-              <label for="Question_input">Question</label>
-              <input id="Question_input" type="text" name="question" required />
-              <label for="Answer_input">Answer</label>
-              <input id="Answer_input" type="text" name="answer" required />
-              <label for="Tags_input">Tags</label>
-              <input id="Tags_input" type="text" name="tags" required />
-              <button class="Card_show">SUBMIT</button>
-            </fieldset>
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <ul class="Footer_ul">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="bookmark.html">Bookmarked Questions</a></li>
-        <li><a href="create_questions.html">Create Questions</a></li>
-        <li><a href="profile.html">Your Profile</a></li>
-      </ul>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" language="JavaScript" type="text/javascript" defer></script>
+  <title>Quiz App</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="Header_title">Create Questions</h1>
+  </header>
+  <main>
+    <section class="Card">
+      <div class="Card_bookmark"></div>
+      <h2 id="Form_heading" class="Card_title">CREATE A QUESTION</h2>
+      <div class="Card_content">
+        <p id="Form_description" class="Card_question">
+          Please enter a good question, an correct answer <br> and four well
+          describing tags (separated by commata) <br> in the form fields below.
+        </p>
+        <form aria-labelledby="form-heading" aria-describedby="form-description">
+          <fieldset>
+            <!-- Question -->
+            <div>
+              <label for="Question_textarea">Question</label>
+              <textarea id="Question_textarea" name="question" type=text rows="4" cols="70"
+                placeholder="Please set your question..." minlength:"10" maxlength="240" data-js="questionTextarea"
+                required></textarea>
+              <div id="Question_textarea_count" class="Textarea_count" data-js="questionTextareaCount"><span>0
+                  / 240 characters remaining</span></div>
+            </div>
+            <!-- Answer -->
+            <div>
+              <label for="Answer_textarea">Answer</label>
+              <textarea id="Answer_textarea" name="answer" type=text rows="4" cols="70"
+                placeholder="Please set your answer..." minlength:"10" maxlength="240" data-js="answerTextarea"
+                required></textarea>
+              <div><span id="Answer_textarea_count" class="Textarea_count" data-js="answerTextareaCount">0
+                  / 240 characters remaining</span></div>
+            </div>
+            <!-- Tags -->
+            <label for="tags-input">Tags</label>
+            <input id="tags-input" type="text" name="tags" required />
+            <button class="Card_button" data-js="createQuestionButton">
+              SUBMIT
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <ul class="Footer_ul">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bookmark.html">Bookmarked Questions</a></li>
+      <li><a href="create_questions.html">Create Questions</a></li>
+      <li><a href="profile.html">Your Profile</a></li>
+    </ul>
+  </footer>
+</body>
+
 </html>
