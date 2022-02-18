@@ -15,5 +15,5 @@ header h1 {
 }
 
 h1:hover {
-  color: hotpink;
+  color: var(--hover-color);
 }

@@ -4,9 +4,20 @@ const toggleAnswerButton = document.querySelector(
 );
 const answerText = document.querySelector('[data-js="showHiddenAnswer"]');
 
+// Add a Bookmark
+const bookmark = document.querySelector('[data-js="bookmarkIcon"');
+const bookmarkToggled = document.querySelector(
+  '[data-js="bookmarkIconToggled"'
+);
+
+bookmark?.addEventListener('click', () => {
+  bookmarkToggled.classList.toggle('Card_bookmark_icon_bookmarked');
+  console.log('testclick');
+});
+
 //Question Textarea of the create_question.html
-let questionInput = document.querySelector('[data-js="questionTextarea"]');
-let questionLog = document.querySelector('[data-js="questionTextareaCount"]');
+const questionInput = document.querySelector('[data-js="questionTextarea"]');
+const questionLog = document.querySelector('[data-js="questionTextareaCount"]');
 const txtMaxLength = ' / 240 characters remaining';
 
 //Answer Textarea of the create_question.html
