@@ -26,6 +26,16 @@
   overflow: hidden;
 }
 
+.Card_bookmark_image--hidden {
+  display: none;
+}
+
+.Card_bookmark_image--show {
+  display: inline;
+  position: absolute;
+  max-width: 30px;
+}
+
 .Card_content {
   position: absolute;
   border: 3px solid var(--color-bright);
