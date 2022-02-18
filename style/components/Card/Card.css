@@ -21,9 +21,92 @@
   height: 75px;
   top: 0;
   right: 0;
-  border-radius: 0 25px 0 100%;
+  border-radius: 0 24px 0 100%;
   background-color: gold;
   overflow: hidden;
+}
+
+.Card_bookmark_icon {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  height: 35px;
+  width: 25px;
+  transform: rotate(0deg) skew(0deg);
+  border-radius: 3px 3px 0 0;
+  border-left: 12.5px solid black;
+  border-right: 12.5px solid black;
+  border-bottom: 12.5px solid gold;
+  z-index: 1;
+  pointer-events: all;
+}
+
+.Card_bookmark_icon_link {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  height: 35px;
+  width: 25px;
+  /* right: calc(width / 2); */
+  text-decoration: none;
+  color: transparent;
+  z-index: 4;
+}
+
+.Card_bookmark_icon_link:hover {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  height: 28px;
+  width: 21px;
+  transform: rotate(0deg) skew(0deg);
+  border-radius: 1px 1px 0 0;
+  border-left: 10.5px solid var(--hover-color);
+  border-right: 10.5px solid var(--hover-color);
+  border-bottom: 10.5px solid transparent;
+  z-index: 4;
+}
+
+.Card_bookmark_icon_empty {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  height: 28px;
+  width: 21px;
+  transform: rotate(0deg) skew(0deg);
+  border-radius: 1px 1px 0 0;
+  border-left: 10.5px solid var(--color-bright);
+  border-right: 10.5px solid var(--color-bright);
+  border-bottom: 10.5px solid black;
+  z-index: 2;
+}
+
+.Card_bookmark_icon_bookmarked {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  height: 28px;
+  width: 21px;
+  transform: rotate(0deg) skew(0deg);
+  border-radius: 1px 1px 0 0;
+  border-left: 10.5px solid var(--bookmark-color);
+  border-right: 10.5px solid var(--bookmark-color);
+  border-bottom: 10.5px solid black;
+  z-index: 2;
+}
+
+.Card_bookmark_icon_bottom_border {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  height: 35px;
+  width: 25px;
+  transform: rotate(0deg) skew(0deg);
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 12.5px solid gold;
+  z-index: 3;
 }
 
 .Card_content {
