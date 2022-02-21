@@ -5,31 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="script.js"
-      language="JavaScript"
-      type="text/javascript"
-      defer
-    ></script>
-    <title>Quiz App</title>
+    <script src="script.js" type="module" language="JavaScript" defer></script>
+    <title>Quiz Apps</title>
   </head>
 
   <body>
     <header>
       <h1 class="Header_title">QUIZ-APP</h1>
+      <h1 class="Header_title">Create Questions</h1>
     </header>
     <main>
-      <section class="Card">
-        <div class="Card_bookmark">
+      <section class="Card" data-js="sectionQuestion">
+        <div class="Card_bookmark" data-js-bookmark>
           <div class="Card_bookmark_icon"></div>
           <div
             class="Card_bookmark_icon_empty"
             data-js="bookmarkIconToggled"
           ></div>
           <div class="Card_bookmark_icon_bottom_border"></div>
-          <a data-js="bookmarkIcon" href="#" class="Card_bookmark_icon_link"
-            >a</a
-          >
+          <div data-js="bookmarkIcon" class="Card_bookmark_icon_link"></div>
         </div>
         <h2 class="Card_title">QUESTION</h2>
         <div class="Card_content">
@@ -54,13 +48,138 @@
           </div>
         </div>
       </section>
+      <section class="Card" data-js="sectionQuestion">
+        <div class="Card_bookmark" data-js-bookmark>
+          <div class="Card_bookmark_icon"></div>
+          <div
+            class="Card_bookmark_icon_empty"
+            data-js="bookmarkIconToggled"
+          ></div>
+          <div class="Card_bookmark_icon_bottom_border"></div>
+          <div data-js="bookmarkIcon" class="Card_bookmark_icon_link"></div>
+        </div>
+        <h2 class="Card_title">QUESTION</h2>
+        <div class="Card_content">
+          <p class="Card_question">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nemo
+            eum ea totam! Iure obcaecati odit soluta sint quidem similique,
+            ipsam debitis nihil sit iusto, cum aliquid neque placeat quibusdam.
+          </p>
+          <div class="flex-column-centered">
+            <button class="Card_button" data-js="toggleAnswerButton">
+              SHOW ANSWER
+            </button>
+            <div class="Card_answer" data-js="showHiddenAnswer">
+              Eine versteckte Antwort :O <br />ABER SOWAS VON SICHTBAR !!!
+            </div>
+          </div>
+          <div class="Card_tags">
+            <div class="Card_tag1">#animal</div>
+            <div class="Card_tag2">#nature</div>
+            <div class="Card_tag3">#africa</div>
+            <div class="Card_tag4">#wildlife</div>
+          </div>
+        </div>
+      </section>
+      <section class="Card" data-js="sectionCreateQuestion">
+        <div class="Card_bookmark" data-js-bookmark>
+          <div class="Card_bookmark_icon"></div>
+          <div
+            class="Card_bookmark_icon_empty"
+            data-js="bookmarkIconToggled"
+          ></div>
+          <div class="Card_bookmark_icon_bottom_border"></div>
+          <a data-js="bookmarkIcon" href="#" class="Card_bookmark_icon_link"
+            >a</a
+          >
+        </div>
+        <h2 id="Form_heading" class="Card_title">CREATE A QUESTION</h2>
+        <div class="Card_content">
+          <p id="Form_description" class="Card_question">
+            Please enter a good question, an correct answer <br />
+            and four well describing tags (separated by commata) <br />
+            in the form fields below.
+          </p>
+          <form
+            aria-labelledby="form-heading"
+            aria-describedby="form-description"
+          >
+            <fieldset>
+              <!-- Question -->
+              <div data-js="inputArea">
+                <label for="Question_textarea">Question</label>
+                <textarea
+                  id="Question_textarea"
+                  name="question"
+                  type="text"
+                  rows="4"
+                  cols="70"
+                  placeholder="Please set your question..."
+                  minlength="10"
+                  maxlength="240"
+                  data-js="textarea"
+                  required
+                >
+                </textarea>
+                <div
+                  id="Question_textarea_count"
+                  class="Textarea_count"
+                  data-js="textareaCount"
+                >
+                  <span>0 / 240 characters remaining</span>
+                </div>
+              </div>
+              <!-- Answer -->
+              <div data-js="inputArea">
+                <label for="Answer_textarea">Answer</label>
+                <textarea
+                  id="Answer_textarea"
+                  name="answer"
+                  type="text"
+                  rows="4"
+                  cols="70"
+                  placeholder="Please set your answer..."
+                  minlength="10"
+                  maxlength="240"
+                  data-js="textarea"
+                  required
+                ></textarea>
+                <div>
+                  <span
+                    id="Answer_textarea_count"
+                    class="Textarea_count"
+                    data-js="textareaCount"
+                    >0 / 240 characters remaining</span
+                  >
+                </div>
+              </div>
+              <!-- Tags -->
+              <label for="tags-input">Tags</label>
+              <input id="tags-input" type="text" name="tags" required />
+              <button class="Card_button" data-js="createQuestionButton">
+                SUBMIT
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <ul class="Footer_ul">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="bookmark.html">Bookmarked Questions</a></li>
-        <li><a href="create_questions.html">Create Questions</a></li>
-        <li><a href="profile.html">Your Profile</a></li>
+        <li>
+          <a href="#" data-toggle data-js="toggleQuestions">Home</a>
+        </li>
+        <li>
+          <a href="#" data-toggle data-js="toggleBookmarked"
+            >Bookmarked Questions</a
+          >
+        </li>
+        <li>
+          <a href="#" data-toggle data-js="toggleCreate">Create Questions</a>
+        </li>
+        <li>
+          <a href="#" data-toggle data-js="toggleProfile">Your Profile</a>
+        </li>
       </ul>
     </footer>
   </body>

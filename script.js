@@ -1,40 +1,43 @@
-// Toggles Answer Button of the index.html
-const toggleAnswerButton = document.querySelector(
-  '[data-js="toggleAnswerButton"]'
-);
-const answerText = document.querySelector('[data-js="showHiddenAnswer"]');
+import { answerButtonEventlistener } from './scripts/answer_button_events.js';
+import { bookmarkEventlistener } from './scripts/bookmark_events.js';
+import { areatextEventlistener } from './scripts/textarea_counter_events.js';
 
-// Add a Bookmark
-const bookmark = document.querySelector('[data-js="bookmarkIcon"');
-const bookmarkToggled = document.querySelector(
-  '[data-js="bookmarkIconToggled"'
-);
+answerButtonEventlistener();
+bookmarkEventlistener();
+areatextEventlistener();
 
-bookmark?.addEventListener('click', () => {
-  bookmarkToggled.classList.toggle('Card_bookmark_icon_bookmarked');
-  console.log('testclick');
+const toggleList = document.querySelectorAll('[data-toggle]');
+
+toggleList.forEach(link => {
+  console.log(link);
+  // link.classList.toggle('Hidden_content');
+  link.addEventListener('click', () => {
+    if (link.textContent === 'Home') {
+      const activeSections = document.querySelectorAll(
+        '[data-js="sectionQuestion"]'
+      );
+      toggleHiddenContent(activeSections);
+    } else if (link.textContent === 'Bookmarked Questions') {
+      const activeSections = document.querySelectorAll(
+        '[data-js="sectionBookmarked"]'
+      );
+      toggleHiddenContent(activeSections);
+    } else if (link.textContent === 'Create Questions') {
+      const activeSections = document.querySelectorAll(
+        '[data-js="sectionCreateQuestion"]'
+      );
+      toggleHiddenContent(activeSections);
+    } else if (link.textContent === 'Your Profile') {
+      const activeSections = document.querySelectorAll(
+        '[data-js="sectionProfile"]'
+      );
+      toggleHiddenContent(activeSections);
+    }
+  });
 });
 
-//Question Textarea of the create_question.html
-const questionInput = document.querySelector('[data-js="questionTextarea"]');
-const questionLog = document.querySelector('[data-js="questionTextareaCount"]');
-const txtMaxLength = ' / 240 characters remaining';
-
-//Answer Textarea of the create_question.html
-const answerInput = document.querySelector('[data-js="answerTextarea"]');
-const answerLog = document.getElementById('Answer_textarea_count');
-
-// Toggles Answer Button of the index.html
-toggleAnswerButton?.addEventListener('click', () => {
-  answerText.classList.toggle('Card_answer-show');
-});
-
-//Question Textarea of the create_question.html
-questionInput?.addEventListener('input', e => {
-  questionLog.textContent = e.target.value.length + txtMaxLength;
-});
-
-//Answer Textarea of the create_question.html
-answerInput?.addEventListener('input', e => {
-  answerLog.textContent = e.target.value.length + txtMaxLength;
-});
+function toggleHiddenContent(input) {
+  input.forEach(entry => {
+    entry.classList.toggle('Hidden_content');
+  });
+}
